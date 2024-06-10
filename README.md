@@ -1,1 +1,1 @@
-Stock market analyzer(still in progress)
+Stock market analyzer using django (still in progress)
