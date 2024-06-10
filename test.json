@@ -1,0 +1,65 @@
+{
+    "data": [
+        {
+            "symbol": "R90",
+            "instrument_name": "Rockwool International A/S ",
+            "exchange": "FSX",
+            "mic_code": "XFRA",
+            "exchange_timezone": "Europe/Berlin",
+            "instrument_type": "Common Stock",
+            "country": "Germany",
+            "currency": "EUR"
+        },
+        {
+            "symbol": "R90",
+            "instrument_name": "ROCKWOOL INTL NAM.B DK 10",
+            "exchange": "XHAN",
+            "mic_code": "XHAN",
+            "exchange_timezone": "Europe/Berlin",
+            "instrument_type": "Common Stock",
+            "country": "Germany",
+            "currency": "EUR"
+        },
+        {
+            "symbol": "R90",
+            "instrument_name": "Rockwool AS",
+            "exchange": "XBER",
+            "mic_code": "XBER",
+            "exchange_timezone": "Europe/Berlin",
+            "instrument_type": "Common Stock",
+            "country": "Germany",
+            "currency": "EUR"
+        },
+        {
+            "symbol": "R90",
+            "instrument_name": "Rockwool AS",
+            "exchange": "XDUS",
+            "mic_code": "XDUS",
+            "exchange_timezone": "Europe/Berlin",
+            "instrument_type": "Common Stock",
+            "country": "Germany",
+            "currency": "EUR"
+        },
+        {
+            "symbol": "R90",
+            "instrument_name": "Rockwool AS",
+            "exchange": "Munich",
+            "mic_code": "XMUN",
+            "exchange_timezone": "Europe/Berlin",
+            "instrument_type": "Common Stock",
+            "country": "Germany",
+            "currency": "EUR"
+        },
+        {
+            "symbol": "R900",
+            "instrument_name": "Rockwool A/S",
+            "exchange": "FSX",
+            "mic_code": "XFRA",
+            "exchange_timezone": "Europe/Berlin",
+            "instrument_type": "Common Stock",
+            "country": "Germany",
+            "currency": "EUR"
+        }
+    ],
+    "status": "ok"
+}

@@ -1,0 +1,34 @@
+{% extends 'base_layout.html'%}
+
+{% block content %}
+
+<div class = "stock-actions">
+    <!-- will learn model forms to put into database later-->
+    <!-- can also use the request.user.is_authenticated if you would like, but the decorator thing is another metho-->
+   <h2>Buy or sell a stock </h2>
+
+    <form class = "site-form" action = "{%url 'portfolio:stock_portfolio'%}" method = "post" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{ form1.as_p }}
+        <input type = "submit" value = "Move forward with this action">
+
+
+    </form>
+    <br>
+    <br>
+    <br>
+
+    <form class = "site-form2" action = "{%url 'portfolio:stock_portfolio'%}" method = "post" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{form2}}
+
+        <input type = "submit" value = "Deposit Money">
+
+
+    </form>
+
+
+
+</div>
+
+{% endblock %}

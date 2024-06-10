@@ -1,0 +1,14 @@
+{% extends 'base_layout.html'%}
+
+{% block content %}
+
+<h1> Sign up </h1>
+
+<form class="site-form" action="{% url 'accounts:signup' %}" method = "post">
+    {% csrf_token%} <!-- this is sent to the server so that they know it is coming from your application-->
+    {{form}}
+    <input type = "submit"  name= "" value = "SignUp">
+
+</form>
+
+{% endblock %}

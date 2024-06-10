@@ -1,0 +1,17 @@
+{% extends 'base_layout.html'%}
+
+{% block content %}
+
+<h1> Login </h1>
+
+<form class="site-form" action="{% url 'accounts:login' %}" method = "post">
+    {% csrf_token%} <!-- this is sent to the server so that they know it is coming from your application-->
+    {{form}}
+     {% if request.GET.next%}
+        <input type = "hidden" name = 'next' value = "{{request.GET.next}}"> <!-- this input type will be sent with the submit button with the post request-->
+    {%endif%}
+    <input type = "submit"  name= "" value = "Login">
+
+</form>
+
+{% endblock %}

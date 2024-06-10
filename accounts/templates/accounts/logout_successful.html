@@ -1,0 +1,12 @@
+{% extends 'base_layout.html'%}
+
+
+
+{%block content%}
+
+<h1 style ="text-align:center;"> Logout successful </h1>
+<form method="GET" action="{% url 'stock_information:stock_info' %}" style="text-align: center;">
+    <input type="submit" value="Redirect to Stock Information Page Page">
+</form>
+
+{%endblock%}

@@ -1,0 +1,38 @@
+{% extends 'base_layout.html'%}
+
+{% block content %}
+    <form class="stock-form" action="{% url 'stock_information:stock_info' %}" method="post">
+        {% csrf_token %}
+        <label for="textbox">Enter Stock Ticker:</label>
+        <input type="text" id="textbox" name="textbox">
+        <br>
+        <label for = "graph_type">Choose a graph type</label>
+        <select name="graph_type" class="graph_options">
+            <option value = "1day"> 1 day </option>
+            <option value = "1week"> 1 week</option>
+            <option value = "ytd"> Year to Date</option>
+            <option value = "1year"> 1 Year </option>
+            <option value = "5years"> 5 Years </option>
+            <option value = "10years"> 10 years </option>
+        </select>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+    <div class = 'price'>
+        {% if dataprice.price == 'Invalid Stock ticker'%}
+            <p> Invalid stock ticker: {{ request.POST.textbox }}</p>
+        {%else%}
+            <p> Price: {{ request.POST.textbox }}: {{ dataprice.price }}</p>
+
+        {%endif%}
+    </div>
+
+    <div class = "graph">
+        {{ graph|safe }}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% if request.user.is_authenticated %}
+    <nav>
+        <form class = "logout_link" method = "POST" action = "{%url 'accounts:logout' %}" ><!-- this should redirect to the url named logout in the accounts page.-->
+            {% csrf_token %}
+            <button type = "submit">Logout </button>
+        </form>
+    </nav>
+
+    {%else%}
+    <nav>
+        <form class = "login_link" method = "GET" action = "{%url 'accounts:login' %}" ><!-- this should redirect to the url named logout in the accounts page.-->
+            {% csrf_token %}
+            <button type = "submit">Login </button>
+        </form>
+        <button style="text-color = black"><a href = "{% url 'accounts:signup'%}">Sign up</a></button>
+<!--        not the best way to do the above line of code-->
+    </nav>
+    {% endif %}
+</html>
